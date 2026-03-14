@@ -2,6 +2,8 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
+<meta name="description" content="S.G Lanora'nın tüm kitapları ve hikâyeleri. Son Nefes Şehri, Kiralık Katliam ve daha fazlası.">
+<meta name="keywords" content="kitap, hikâye, S.G Lanora">
 <title>S.G Lanora | Tüm Kitaplar</title>
 <style>
 /* Genel Stil */
@@ -27,9 +29,11 @@ section{max-width:1000px;margin:auto;padding:60px 20px;}
 .book{flex:0 0 300px;background:#141420;padding:20px;border-radius:10px;transition:0.3s;cursor:pointer;}
 .book img{width:100%;border-radius:5px;margin-bottom:10px;}
 .book:hover{transform:scale(1.05);background:#1f1f2e;}
+.book-title{font-size:20px;font-weight:bold;margin:15px 0 10px 0;}
 .characters{display:flex;gap:20px;flex-wrap:wrap;}
 .character{background:#1b1b2a;padding:20px;border-radius:10px;flex:1;transition:0.3s;cursor:pointer;}
 .character:hover{transform:scale(1.05);background:#252533;}
+.character-book{font-size:14px;opacity:0.7;color:#ff2e63;margin-bottom:10px;}
 .comment-box{background:#141420;padding:20px;border-radius:10px;margin-top:20px;}
 .comment-box input, .comment-box textarea{width:100%;padding:10px;margin:5px 0;border-radius:5px;border:none;}
 .comment-box button{padding:10px 20px;border:none;background:#ff2e63;color:white;border-radius:5px;cursor:pointer;transition:0.3s;}
@@ -68,18 +72,13 @@ button.scroll-left:hover, button.scroll-right:hover{background:#ff3e7a;}
 <div class="book-slider" id="bookSlider">
 <div class="book">
 <img src="https://via.placeholder.com/300x400?text=Son+Nefes+Şehri" alt="Son Nefes Şehri">
-<h3>Son Nefes Şehri</h3>
+<div class="book-title">Son Nefes Şehri</div>
 <p>Bir şehir… Bir sır… Ve çözülmeyi bekleyen karanlık bir hikâye.</p>
 </div>
 <div class="book">
-<img src="https://via.placeholder.com/300x400?text=İntikam+Mevsimi" alt="İntikam Mevsimi">
-<h3>İntikam Mevsimi</h3>
-<p>Geçmiş unutulmaz. Bazı insanlar için intikam tek çıkış yoludur.</p>
-</div>
-<div class="book">
-<img src="https://via.placeholder.com/300x400?text=Yeni+Kitap" alt="Yeni Kitap">
-<h3>Yeni Kitap</h3>
-<p>İleride ekleyeceğin kitapları tanıtabilirsin.</p>
+<img src="https://via.placeholder.com/300x400?text=Kiralık+Katliam" alt="Kiralık Katliam">
+<div class="book-title">Kiralık Katliam</div>
+<p>Para için her şey yapılabilir... Hatta cinayet da. Bir ödül, bir cinayetçi ve çözülmesi gereken bir gizem.</p>
 </div>
 </div>
 </section>
@@ -87,17 +86,24 @@ button.scroll-left:hover, button.scroll-right:hover{background:#ff3e7a;}
 <section id="karakterler">
 <h2>Karakterler</h2>
 <div class="characters">
-<div class="character"><h3>Lora</h3><p>Gerçeğin peşinden gitmekten korkmayan genç bir kız.</p></div>
-<div class="character"><h3>Alba</h3><p>Beyaz saçlı gizemli bir ajan. Gerçek kimliğini kimse bilmiyor.</p></div>
-<div class="character"><h3>Maskeli Kadın</h3><p>Şehirdeki cinayetlerin arkasındaki karanlık gölge.</p></div>
+<div class="character"><div class="character-book">Son Nefes Şehri</div><h3>Aras</h3><p>Gerçeğin peşinden gitmekten korkmayan ve gizemi çözmek için her şeyi göze alan bir karakter.</p></div>
+<div class="character"><div class="character-book">Son Nefes Şehri</div><h3>Kerem</h3><p>Hikâyenin karmaşık çizgilerini birleştiren önemli bir kişi.</p></div>
+<div class="character"><div class="character-book">Son Nefes Şehri</div><h3>Elif</h3><p>Şehirdeki olayların merkezinde yer alan gizemli bir karakterdir.</p></div>
+<div class="character"><div class="character-book">Son Nefes Şehri</div><h3>Serra</h3><p>Sorunların çözümü için önemli ipuçları taşıyan bir kişi.</p></div>
+<div class="character"><div class="character-book">Son Nefes Şehri</div><h3>Melis</h3><p>Hikâyenin önemli dönüm noktalarından birini tetikleyen karakter.</p></div>
+<div class="character"><div class="character-book">Son Nefes Şehri</div><h3>Dorat</h3><p>Gölgede kalan ama etkili olan gizemli bir varlık.</p></div>
+<div class="character"><div class="character-book">Kiralık Katliam</div><h3>Vesperia</h3><p>Tehlikeli ve kararlı, işi bitirmeyi seven bir profesyonel.</p></div>
+<div class="character"><div class="character-book">Kiralık Katliam</div><h3>Palmer</h3><p>Kontrol altında tutmaya çalışan ama kontrolü kaybetmek üzere olan bir kişi.</p></div>
+<div class="character"><div class="character-book">Kiralık Katliam</div><h3>Kai</h3><p>Oyunun kurallarını değiştiren beklenmedik bir oyuncu.</p></div>
+<div class="character"><div class="character-book">Kiralık Katliam</div><h3>Boris İvanov</h3><p>Karanlık geçmişi ve tehditkar varlığıyla hikâyeyi belirleyen güç.</p></div>
 </div>
 </section>
 
 <section id="yorumlar">
 <h2>Okuyucu Yorumları</h2>
 <div class="comment-box">
-<input type="text" placeholder="Adınız" id="commentName">
-<textarea placeholder="Yorumunuz" id="commentText"></textarea>
+<input type="text" placeholder="Adınız" id="commentName" aria-label="Adınız">
+<textarea placeholder="Yorumunuz" id="commentText" aria-label="Yorumunuz"></textarea>
 <button onclick="addComment()">Yorumu Gönder</button>
 </div>
 <div id="commentList"></div>
@@ -118,15 +124,19 @@ button.scroll-left:hover, button.scroll-right:hover{background:#ff3e7a;}
 const slider = document.getElementById('bookSlider');
 function scrollLeft(){slider.scrollBy({left:-320,behavior:'smooth'});}
 function scrollRight(){slider.scrollBy({left:320,behavior:'smooth'});}
-
-// Yorum ekleme
+// Yorum ekleme (Güvenli XSS önlemi)
 function addComment(){
   const name=document.getElementById('commentName').value;
   const text=document.getElementById('commentText').value;
   if(name && text){
     const div=document.createElement('div');
     div.className='comment-box';
-    div.innerHTML=`<strong>${name}:</strong><p>${text}</p>`;
+    const strong=document.createElement('strong');
+    strong.textContent=name + ':';
+    const p=document.createElement('p');
+    p.textContent=text;
+    div.appendChild(strong);
+    div.appendChild(p);
     document.getElementById('commentList').appendChild(div);
     document.getElementById('commentName').value='';
     document.getElementById('commentText').value='';
