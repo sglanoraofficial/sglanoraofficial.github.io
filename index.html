@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>S.G Lanora | Tüm Kitaplar</title>
+<style>
+/* Genel Stil */
+body{margin:0;font-family:Arial,sans-serif;background:#050509;color:white;scroll-behavior:smooth;}
+a{color:white;text-decoration:none;}
+a:hover{color:#ff2e63;}
+header{background:#0b0b12;text-align:center;padding:50px;}
+header h1{font-size:60px;letter-spacing:3px;}
+header p{opacity:0.7;font-size:18px;}
+nav{background:#111;text-align:center;padding:15px;}
+nav a{margin:20px;font-size:18px;}
+nav a:hover{color:#ff2e63;}
+.hero{height:80vh;background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover no-repeat;background-size:cover;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+.hero h2{font-size:60px;margin:0;letter-spacing:3px;}
+.hero p{font-size:22px;opacity:0.8;}
+.hero button{margin-top:20px;padding:15px 30px;border:none;background:#ff2e63;color:white;font-size:18px;border-radius:5px;cursor:pointer;transition:0.3s;}
+.hero button:hover{background:#ff3e7a;}
+
+/* Bölümler */
+section{max-width:1000px;margin:auto;padding:60px 20px;}
+.book-slider{display:flex;overflow-x:auto;gap:20px;scroll-behavior:smooth;padding-bottom:20px;}
+.book-slider::-webkit-scrollbar{display:none;}
+.book{flex:0 0 300px;background:#141420;padding:20px;border-radius:10px;transition:0.3s;cursor:pointer;}
+.book img{width:100%;border-radius:5px;margin-bottom:10px;}
+.book:hover{transform:scale(1.05);background:#1f1f2e;}
+.characters{display:flex;gap:20px;flex-wrap:wrap;}
+.character{background:#1b1b2a;padding:20px;border-radius:10px;flex:1;transition:0.3s;cursor:pointer;}
+.character:hover{transform:scale(1.05);background:#252533;}
+.comment-box{background:#141420;padding:20px;border-radius:10px;margin-top:20px;}
+.comment-box input, .comment-box textarea{width:100%;padding:10px;margin:5px 0;border-radius:5px;border:none;}
+.comment-box button{padding:10px 20px;border:none;background:#ff2e63;color:white;border-radius:5px;cursor:pointer;transition:0.3s;}
+.comment-box button:hover{background:#ff3e7a;}
+footer{text-align:center;padding:40px;background:#0d0d15;}
+button.scroll-left, button.scroll-right{background:#ff2e63;border:none;color:white;padding:10px 15px;margin:5px;border-radius:5px;cursor:pointer;transition:0.3s;}
+button.scroll-left:hover, button.scroll-right:hover{background:#ff3e7a;}
+</style>
+</head>
+<body>
+
+<header>
+<h1>S.G LANORA</h1>
+<p>Tüm Kitaplarım ve Hikâyelerim</p>
+</header>
+
+<nav>
+<a href="#kitaplar">Kitaplar</a>
+<a href="#karakterler">Karakterler</a>
+<a href="#yorumlar">Okuyucu Yorumları</a>
+<a href="#iletisim">İletişim</a>
+</nav>
+
+<div class="hero">
+<h2>Tüm Kitaplarım</h2>
+<p>Hikâyelerimi keşfet, karakterleri tanı ve gizemli dünyalara adım at!</p>
+<button onclick="document.getElementById('kitaplar').scrollIntoView({behavior:'smooth'})">Kitapları Gör</button>
+</div>
+
+<section id="kitaplar">
+<h2>Kitaplar</h2>
+<div style="text-align:center;margin-bottom:10px;">
+<button class="scroll-left" onclick="scrollLeft()">◀</button>
+<button class="scroll-right" onclick="scrollRight()">▶</button>
+</div>
+<div class="book-slider" id="bookSlider">
+<div class="book">
+<img src="https://via.placeholder.com/300x400?text=Son+Nefes+Şehri" alt="Son Nefes Şehri">
+<h3>Son Nefes Şehri</h3>
+<p>Bir şehir… Bir sır… Ve çözülmeyi bekleyen karanlık bir hikâye.</p>
+</div>
+<div class="book">
+<img src="https://via.placeholder.com/300x400?text=İntikam+Mevsimi" alt="İntikam Mevsimi">
+<h3>İntikam Mevsimi</h3>
+<p>Geçmiş unutulmaz. Bazı insanlar için intikam tek çıkış yoludur.</p>
+</div>
+<div class="book">
+<img src="https://via.placeholder.com/300x400?text=Yeni+Kitap" alt="Yeni Kitap">
+<h3>Yeni Kitap</h3>
+<p>İleride ekleyeceğin kitapları tanıtabilirsin.</p>
+</div>
+</div>
+</section>
+
+<section id="karakterler">
+<h2>Karakterler</h2>
+<div class="characters">
+<div class="character"><h3>Lora</h3><p>Gerçeğin peşinden gitmekten korkmayan genç bir kız.</p></div>
+<div class="character"><h3>Alba</h3><p>Beyaz saçlı gizemli bir ajan. Gerçek kimliğini kimse bilmiyor.</p></div>
+<div class="character"><h3>Maskeli Kadın</h3><p>Şehirdeki cinayetlerin arkasındaki karanlık gölge.</p></div>
+</div>
+</section>
+
+<section id="yorumlar">
+<h2>Okuyucu Yorumları</h2>
+<div class="comment-box">
+<input type="text" placeholder="Adınız" id="commentName">
+<textarea placeholder="Yorumunuz" id="commentText"></textarea>
+<button onclick="addComment()">Yorumu Gönder</button>
+</div>
+<div id="commentList"></div>
+</section>
+
+<section id="iletisim">
+<h2>İletişim</h2>
+<p>Instagram: @sglanora</p>
+<p>Yakında imza günleri ve etkinlikler burada paylaşılacak.</p>
+</section>
+
+<footer>
+<p>© 2026 S.G Lanora</p>
+</footer>
+
+<script>
+// Kitap slider
+const slider = document.getElementById('bookSlider');
+function scrollLeft(){slider.scrollBy({left:-320,behavior:'smooth'});}
+function scrollRight(){slider.scrollBy({left:320,behavior:'smooth'});}
+
+// Yorum ekleme
+function addComment(){
+  const name=document.getElementById('commentName').value;
+  const text=document.getElementById('commentText').value;
+  if(name && text){
+    const div=document.createElement('div');
+    div.className='comment-box';
+    div.innerHTML=`<strong>${name}:</strong><p>${text}</p>`;
+    document.getElementById('commentList').appendChild(div);
+    document.getElementById('commentName').value='';
+    document.getElementById('commentText').value='';
+  }
+}
+</script>
+
+</body>
+</html>
